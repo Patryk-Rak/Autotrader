@@ -1,0 +1,13 @@
+V1 Changelog (09.04.2019):
+- added new bundle 'CarBundle' with "php bin/console generate:bundle",
+- added ext. bundle - Knp_Menu_Bundle (gives possibility to make menu for navbar)
+
+
+
+
+V2 Changelog (09.04.2019):
+
+Bugfixes:
+- repaired error with CarBundle:
+Problem: error while debugging (couldn't find CarBundle class, no 'use' method found)
+Solution: in composer.json, autoload function worked only around src/AppBoundle. Changed source to root tree 'src'.
