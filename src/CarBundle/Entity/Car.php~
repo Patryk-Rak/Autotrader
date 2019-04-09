@@ -53,7 +53,7 @@ class Car
     /**
      * @var int
      * 
-     * @ORM\Column(name="year", type="integer")
+     * @ORM\Column(name="year", type="intiger")
      */
     private $year;
 
@@ -176,7 +176,7 @@ class Car
     /**
      * Set year
      *
-     * @param integer $year
+     * @param \intiger $year
      *
      * @return Car
      */
@@ -190,34 +190,10 @@ class Car
     /**
      * Get year
      *
-     * @return integer
+     * @return \intiger
      */
     public function getYear()
     {
         return $this->year;
-    }
-
-    /**
-     * Set navigation
-     *
-     * @param boolean $navigation
-     *
-     * @return Car
-     */
-    public function setNavigation($navigation)
-    {
-        $this->navigation = $navigation;
-
-        return $this;
-    }
-
-    /**
-     * Get navigation
-     *
-     * @return boolean
-     */
-    public function getNavigation()
-    {
-        return $this->navigation;
     }
 }

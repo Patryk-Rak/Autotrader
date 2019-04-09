@@ -21,7 +21,7 @@ class DefaultController extends Controller
 
     /**
      * @param $id
-     * @Route("/car/{id}", name="show_car")
+     * @Route("/cars/{id}", name="show_car")
      */
     public function showAction($id)
     {

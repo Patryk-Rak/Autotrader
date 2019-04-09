@@ -6,14 +6,14 @@ Car Offer
 {% endblock %}
 
 {% block body %}
-                <h1><span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
-                <h3>This is Car index page</h3>
+                <h1><span>Offer List</h1>
+                <h3>List of our cars</h3>
 
                 <table class="table">
                     <tr>
-                        <th>Make</th>
-                        <th>Name</th>
-                        <th>Actions</th>
+                        <th>Mark</th>
+                        <th>Model</th>
+                        <th>Info</th>
                     </tr>
                     {% for car in cars %}
                         <tr>

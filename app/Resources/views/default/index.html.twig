@@ -1,9 +1,18 @@
 {% extends 'base.html.twig' %}
 
+
 {% block body %}
 
-                <h1><span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
-                <h3>This is default index page</h3>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+          <img class="d-block w-100" src="{{ asset('banner1.jpg') }}" alt="First slide">
+      </div>
+    </div>
+  </div>
+
+                <h1><span>Welcome to</span> Autotrader Shop</h1>
+                <h3>This is Homepage</h3>
  
 
 {% endblock %}
