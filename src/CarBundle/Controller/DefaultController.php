@@ -23,7 +23,7 @@ class DefaultController extends Controller
      * @param $id
      * @Route("/car/{id}", name="show_car")
      */
-    public function showAction($id) 
+    public function showAction($id)
     {
         $carRepository = $this->getDoctrine()->getRepository('CarBundle:Car');
         $car = $carRepository->find($id);
