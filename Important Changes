@@ -11,3 +11,32 @@ Bugfixes:
 - repaired error with CarBundle:
 Problem: error while debugging (couldn't find CarBundle class, no 'use' method found)
 Solution: in composer.json, autoload function worked only around src/AppBoundle. Changed source to root tree 'src'.
+
+-repaired menu.html.twig problem (couldn't find file in direction)
+Problem: error while starting server (twig didnt allow to show content)
+Solution:
+In app/config/config.yml :
+framework:
+    #esi: ~
+    #translator: { fallbacks: ['%locale%'] }
+    secret: '%secret%'
+    router:
+        resource: '%kernel.project_dir%/app/config/routing.yml'
+        strict_requirements: ~
+    form: ~
+    csrf_protection: ~
+    validation: { enable_annotations: true }
+    #serializer: { enable_annotations: true }
+    default_locale: '%locale%'
+    trusted_hosts: ~
+    session:
+        # https://symfony.com/doc/current/reference/configuration/framework.html#handler-id
+        handler_id: session.handler.native_file
+        save_path: '%kernel.project_dir%/var/sessions/%kernel.environment%'
+    fragments: ~
+    http_method_override: true
+    assets: ~
+    php_errors:
+        log: true
+    templating:
+        engines: ['twig']
