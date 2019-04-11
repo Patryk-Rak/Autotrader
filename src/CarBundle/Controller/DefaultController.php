@@ -6,11 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Length;
 
 class DefaultController extends Controller
 {
     /**
-     * @Route("/" , name="offer")
+     * @Route("/offer" , name="offer")
      */
     public function indexAction(Request $request)
     {
@@ -19,7 +21,13 @@ class DefaultController extends Controller
 
         $form = $this->createFormBuilder()
             ->setMethod('GET')
-            ->add('search', TextType::class)
+            ->add('search', TextType::class, [
+                'constraints' => [
+                    new NotBlank(),
+                    new Length(['min' => 2])
+            ]
+
+            ])
             ->getForm();
 
             $form->handleRequest($request);

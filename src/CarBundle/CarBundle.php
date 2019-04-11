@@ -9,7 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class CarBundle extends Bundle
 {
     /**
-     * @Route("/cars")
+     * @Route("/")
      */
     public function indexAction(Request $request)
     {

@@ -40,3 +40,14 @@ framework:
         log: true
     templating:
         engines: ['twig']
+
+
+
+
+V3 Changelog (10.04.2019):
+
+Changes:
+- bootstrap for navbar and tables,
+- added MySQL and connected to car array,
+- added form 'Search',
+- added CRUD admin form for 'offer' subpage (127.0.0.1/offer/admin/)

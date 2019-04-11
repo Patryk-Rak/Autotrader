@@ -65,6 +65,15 @@ class Car
     private $navigation;
 
 
+
+    /**
+     * @var boolean
+     * 
+     * @ORM\Column(name="promote", type="boolean")
+     */
+    private $promote;
+
+
     /**
      * Get id
      *
@@ -132,7 +141,7 @@ class Car
      *
      * @return Car
      */
-    public function setYear(\intiger $year)
+    public function setYear($year)
     {
         $this->year = $year;
 
@@ -226,4 +235,28 @@ class Car
 
 
 
+
+    /**
+     * Set promote
+     *
+     * @param boolean $promote
+     *
+     * @return Car
+     */
+    public function setPromote($promote)
+    {
+        $this->promote = $promote;
+
+        return $this;
+    }
+
+    /**
+     * Get promote
+     *
+     * @return boolean
+     */
+    public function getPromote()
+    {
+        return $this->promote;
+    }
 }

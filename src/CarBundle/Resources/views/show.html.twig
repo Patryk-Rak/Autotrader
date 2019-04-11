@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block title %}
+{{ parent() }}
+{{car.make.name}}
+{% endblock %}
+
+{% block body %}
+<h1>Car:</h1>
+<h3>{{ car.make.name }} Model {{ car.model.name }}</h3>
+
+<div class="container">          
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+                <td>Price</td>
+                <td>{{ car.price }}</td>
+            </tr>
+            <tr>
+                <td>Year</td>
+                <td>{{ car.year }}</td>
+            </tr>
+            <tr>
+                <td>Navigation</td>
+                <td>
+                    {% if car.navigation == 1 %} 
+                        <span class="glyphicon glyphicon-ok"> Yes</span>
+                        {% else %}
+                        <span class="glyphicon glyphicon-remove"> No</span>
+                        {% endif %}
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+<div class="container">
+    <h4>Description:</h4>
+    <p> {{ car.description }}</p>    
+</div>
+
+
+
+<div class="container"></div>
+<p><a href="{{ url('offer') }}">Back</a></p>
+</div>
+{% endblock %}
+
+
+
+{% block javascripts %}
+        
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+{% endblock %}
